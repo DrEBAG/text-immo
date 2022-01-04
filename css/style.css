@@ -1,8 +1,734 @@
-.beispiel{
-    font-size: 35px;
-    color: blue;
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
 }
 
-#text{
-    color: red;
+body {
+	background-color: white;
+	font-family: 'Poppins', sans-serif;
 }
+
+@media screen and (max-width: 576px) {
+	.container {
+		width: 97%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.footer-links-unten li a {
+		font-size: 10px;
+	}
+	.footer-links-unten{
+		display: none;
+	}
+	.top-btn{
+		position: relative;
+		bottom: 25px;
+	}
+	
+	
+	.kontonav-container button{
+		font-size: 16px;
+		width: 100px;
+	}
+}
+
+
+/* Start Nav */
+nav {
+	background-color: #152461;
+	height: 100px;
+	z-index: 500;
+}
+
+.smallnavbar {
+	height: 60px;
+	padding-top: 0px;
+	margin-top: 0px;
+	box-shadow: 0px 1px 25px black;
+	transition: 0.3s ease-in;
+}
+.bignavbar {
+	height: 100px;
+	padding-top: 0px;
+	margin-top: 0px;
+	transition: 0.2s ease-in;
+}
+
+.navbar-brand {
+	font-family: 'Playfair Display', serif;
+	float: left;
+	font-size: 33px;
+	z-index: 10;
+}
+.navbar-brand a{
+	text-decoration: none;
+	color: white;
+}
+.nav-list {
+	padding-top: 23px;
+	float: right;
+	text-align: center;
+}
+
+.nav-items {
+	float: left;
+	padding: 0px 15px 0px 15px;
+	list-style-type: none;
+}
+.nav-items a {
+	text-decoration: none;
+	color: white;
+	font-size: 18px;
+	font-weight: 250;
+}
+.nav-items a:hover {
+	text-decoration: underline;
+}
+.nav-item-active a {
+	font-weight: 400;
+}
+.logo{
+	width: 100px;
+}
+.burger-button {
+	display: none;
+	float: right;
+	margin-top: 12px;
+	cursor: pointer;
+}
+.burger-button div {
+	width: 25px;
+	height: 3px;
+	background-color: white;
+	opacity: 0.8;
+	margin: 5px;
+	border-radius: 1px;
+}
+
+.hr-nav{
+	border: none;
+	border-top: 1px solid white;
+}
+
+/* End Nav */
+
+@media screen and (max-width: 992px) {
+
+	.nav-list {
+		position: fixed;
+		right: 0px;
+		height: 0vh;
+		top: 60px;
+		background: #152461;
+		width: 100%;
+		/*transform: translate(100%);*/
+		transition: 0.4s ease-in-out;
+		overflow: hidden;
+		height: 0px;
+		opacity: 0;
+		text-align: center;
+	}
+	.nav-list li a {
+		opacity: 0.8;
+		font-size: 18px;
+	}
+	.burger-button {
+		display: block;
+	}
+
+	/* .text-home-page-2, .h2-home-page-2 {
+		text-align: center;
+	} */
+	/* #M_e_button {
+		width: 100%;
+	}
+	.button-home-page-2 {
+		margin-right: auto;
+		margin-left: auto;
+		width: 75%;
+	} */
+	.img-1 {
+		margin-top: 30px;
+	}
+	#footer3element{
+		margin-top: 25px;
+	}
+	
+	
+}
+
+/* Nav mobile */
+.nav-active {
+	/*transform: translate(0%);*/
+	/*width: 100%;*/
+	display: grid;
+	height: 60vh;
+	opacity: 1;
+}
+
+.toggle .line1 {
+	transform: rotate(-45deg)translate(-5px,6px);
+	transition: 0.3s ease-in-out;
+}
+.toggle .line2 {
+	opacity: 0;
+	transition: 0.2s ease-in-out;
+}
+
+.toggle .line3 {
+	transform:rotate(45deg)translate(-5px,-6px);
+	transition: 0.3s ease-in-out;
+
+}
+
+/* Start Main Page */
+
+.home-page-1 {
+	height: 100vh;
+}
+
+#M_e_button {
+	margin-top: 30px;
+	background-color: white;
+	border: 3px solid #152461;
+	border-radius: 20px;
+	color: #152461;
+}
+#M_e_button:hover {
+	background-color: #152461;
+	color: white;
+}
+
+.home-page-3{
+	margin-top: 150px;
+	margin-bottom: 500px;
+}
+.verkäufer-käufer-karte{
+	height: 550px;
+	background-color: #ebebeb54;
+	border-radius: 25px;
+	box-shadow: 10px 10px 10px #cac8c8;
+	padding: 10px 50px;
+}
+.karten-btn{
+	padding: 6px 27px;
+	border-radius: 18px;
+	background-color: #152461;
+	color: white;
+	border: none;
+	margin-top: 30px;
+}
+.karten-btn:hover{
+	transform: scale(103%, 103%);
+}
+.karten-img{
+	width: 100%;
+	height: 250px;
+}
+
+.fragen-page-1{
+	height: 90vh;
+}
+
+.fragen-page-1-header{
+	margin-bottom: 30px;
+}
+
+
+/* Start footer */
+.footer{
+	background-color: #152461;
+	color: whitesmoke;
+	padding-top: 17px;
+}
+
+
+.footer li{
+	text-decoration: none;
+	list-style-type: none;
+	color: white;
+}
+
+.footer-h3{
+	font-size: 18px;
+	font-family: 'Playfair Display', serif;
+}
+.footer-links-items a{
+	color: whitesmoke;
+	list-style-type: none;
+	text-decoration: none;
+	font-size: 12px;
+
+}
+
+.footer-links-items a:hover{
+	text-decoration: underline;
+}
+.footer-links{
+	padding: 0px;
+}
+
+.footer-links-unten{
+	margin-left: auto;
+	margin-right: auto;
+	width: 679px;
+}
+
+/* Scroll to top btn */
+#Btn-scroll-top{
+	border: none;
+	background-color: #152461;
+}
+
+.top-btn{
+	font-size: 33px;
+	color: white;
+	opacity: 0.9;
+	animation: bounce-btn 0.5s ease-in forwards infinite alternate;
+}
+.top-btn:hover{
+	opacity: 0.3;
+}
+@keyframes bounce-btn {
+	from {
+		transform: translateY(0);
+	}
+	
+	to {
+		transform: translateY(-5px);
+	}
+}
+/* End Scroll to top btn */
+
+/* End footer */
+
+
+/* Konto Page */
+
+.konto-page {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.auth-page h4 {
+	font-size: 30px;
+}
+
+.auth-page label {
+	font-size: 14px;
+	color: #878787;
+	margin-left: 10px;
+}
+
+.auth-page input {
+	background-color: #e4e2e2;
+	border-radius: 20px;
+	border: none;
+	font-size: 16px;
+	padding: 5px 13px;
+	width: 300px;
+	margin-top: 10px;
+	margin-bottom: 16px;
+}
+
+.login-btn {
+	width: 100%;
+	height: 35px;
+	background-color: #152461;
+	color: white;
+	border: none;
+	border-radius: 20px;
+	margin-top: 15px;
+}
+
+
+.forgot-passwort {
+	background-color: white;
+	border: none;
+	margin-top: 10px;
+	width: 100%;
+	color: #878787;
+	font-size: 12px;
+	text-decoration: underline;
+}
+.forgot-passwort:hover{
+	color: black;
+}
+
+
+#signup-btn {
+	width: 100%;
+	height: 35px;
+	background-color: white;
+	border: 3px solid #152461;
+	border-radius: 20px;
+	margin-top: 15px;
+}
+#signup-btn a {
+	color: #152461;
+	text-decoration: none;
+}
+#signup-btn:hover {
+	background-color: #152461;
+}
+#signup-btn a:hover {
+	color: white;
+	text-decoration: underline;
+}
+
+
+/* signup page */
+
+.signup-page {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#navbar-signup{
+	position: relative;
+	margin-bottom: 4vh;
+	background-color: white;
+}
+
+.signup-btn {
+	width: 100%;
+	height: 35px;
+	background-color: #152461;
+	color: white;
+	border: none;
+	border-radius: 20px;
+	margin-top: 15px;
+}
+/* Error Message beim Login und signUp */
+.error-message{
+	color: red;
+	opacity: 0.7;
+	font-size: 12px;
+	max-width: 300px;
+	padding-left: 10px;
+	display: none;
+}
+.error-message span{
+	width: 90%;
+	float: left;
+}
+.fa-exclamation{
+	font-size: 16px;
+	float: left;
+	width: 10%;
+}
+
+
+/* Konto page when loggen in */
+
+.konto-page-in {
+	width: 100%;
+	min-height: 100vh;
+	padding-top: 170px;
+}
+.helloUser h3{
+	font-size: 30px;
+}
+.welcoming-bar{
+	margin-bottom: 40px;
+}
+.logout-btn{
+	width: 110px;
+	height: 35px;
+	background-color: white;
+	border: 3px solid #e4e2e2;
+	border-radius: 20px;
+	color: black;
+}
+
+
+/* neue Konto page */
+.verkauf-kauf-info-box{
+	width: 100%;
+	min-height: 100vh;
+	margin-top: 120px;
+}
+
+.konto-auswahl-nav{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+}
+.kontonav-container{
+	position: relative;
+}
+.info-btn{
+	background-color: white;
+	margin: 0px 0px;
+	padding: 3px 5px;
+	width: 195px;
+	border: none;
+	font-size: 18px;
+	color: black;
+}
+.kontonav-btn{
+	background-color: white;
+	margin: 0px 0px;
+	padding: 3px 0px;
+	width: 130px;
+	border: none;
+	font-size: 18px;
+	color: black;
+}
+.linie{
+	width: 100%;
+	height: 4px;
+	background-color: #152461;
+	border-radius: 3px;
+	position: absolute;
+	bottom: 0px;
+	display: none;
+}
+
+
+/* .konto-info{
+	margin-top: 60px;
+} */
+.eddit-userinfo, .save-userinfo{
+	background-color: white;
+	text-decoration: underline;
+	border: none;
+	color: #878787;
+	font-size: 14px;
+}
+.edditInput{
+	padding: 5px 10px;
+	border-radius: 14px;
+	font-size: 13px;
+	margin-top: 10px;
+	margin-left: -5px;
+	width: 50%;
+	background-color: #e4e2e2;
+	border: none;
+	margin-bottom: 12px;
+}
+.eddit-userinfo:hover, .save-userinfo:hover{
+	color: black;
+}
+#deleteUserBtn{
+	background-color: white;
+	color: rgb(172, 0, 0);
+	padding: 2px 10px;
+	border: 3px solid rgb(172, 0, 0);
+	border-radius: 20px;
+}
+#deleteUserBtn:active{
+	background-color: rgba(172, 0, 0, 0.356);
+}
+#deleteUserBtn:hover{
+	transform: scale(102%);
+}
+.delete-konto, .not-delete-konto{
+	background-color: #152461;
+	color: white;
+	border-radius: 20px;
+}
+.not-delete-konto:hover{
+	color: white;
+}
+.delete-konto{
+	background-color: white;
+	border: 2px solid #152461;
+	color: #152461;
+}
+
+
+/* Verkaufen */
+
+.fa-plus {
+	font-size: 33px;
+	color: #cac8c8;
+}
+.create-new-verkaufsobjekt{
+	padding: 33px 68px;
+	border: 3px solid #e4e2e2;
+	/* background-color: #e4e2e28c; */
+	background-color: white;
+	margin-top: 20px;
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.create-new-verkaufsobjekt:hover{
+	background-color: #e4e2e2b0;
+}
+/*Modal mit formular*/
+#verkaufobjekt-form label {
+	font-size: 14px;
+	color: black;
+	margin-left: 10px;
+}
+#verkaufobjekt-form input {
+	background-color: #e4e2e2;
+	border-radius: 20px;
+	border: none;
+	font-size: 16px;
+	padding: 5px 13px;
+	width: 300px;
+	margin-top: 10px;
+	margin-bottom: 16px;
+}
+.select-art{
+	background-color: #e4e2e2;
+	border-radius: 20px;
+	border: none;
+	font-size: 16px;
+	padding: 5px 13px;
+	width: 300px;
+	margin-top: 10px;
+	margin-bottom: 16px;
+}
+.objekt-senden-btn{
+	background-color: #152461;
+	color: white;
+	border-radius: 20px;
+	width: 150px;
+}
+.objekt-abbrechen-btn{
+	color: black;
+}
+.objekt-abbrechen-btn:hover{
+	color: rgba(245, 30, 30, 0.815);
+}
+
+/*Verkauf Objekte für verkäufer*/
+.konto-verkauf-liste, .bieter-objekt-liste{
+	list-style: none;
+	padding: 0px;
+}
+.verkaufobjekt-item, .bietobjekt-item{
+	background-color: #e9e9e96c;
+	border-radius: 15px;
+}
+.Zeit{
+	border: 2px solid #ffbf00;
+	border-radius: 15px;
+	font-size: 14px;
+	background-color:#ffd04417;
+	color: #e7ad00;	
+	font-weight: 450;
+}
+.Preis{
+	font-size: 19px;
+	font-weight: 550;
+}
+.fa-clock{
+	font-size: 17px;
+	margin-top: 3px;
+}
+.gebot-tabelle{
+	background-color: white;
+	margin-top: 10px;
+
+}
+.gebot-tabelle thead th{
+	position: sticky;
+	top: 0;
+	background-color: white;
+}
+.tabelle-container{
+	overflow-y: scroll;
+	height: 350px;
+	border-radius: 15px;
+	padding: 0px 15px 10px 15px;
+	background-color: white;
+	position: relative;
+}
+
+.verkaufobjekt-angabe{
+	float: right;
+}
+.verkaufobjekt-merkmal{
+	font-weight: 450;
+}
+.verkaufobjekt-info{
+	width: 100%;
+}
+.bearbeiten-btn{
+	background-color: #e9e9e96c;
+	border: none;
+	text-decoration: underline;
+	float: right;
+	font-size: 14px;
+}
+.bearbeiten-btn:hover{
+	transform: scale(103%, 103%);
+}
+
+/*Kauf Objekte für Käufer*/
+.create-new-kaufobjekt{
+	padding: 33px 68px;
+	border: 3px solid #e4e2e2;
+	/* background-color: #e4e2e28c; */
+	background-color: white;
+	margin-top: 20px;
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.create-new-kaufobjekt:hover{
+	background-color: #e4e2e2b0;
+}
+#Bieter-form .input{
+	background-color: #e4e2e2;
+	border-radius: 20px;
+	border: none;
+	font-size: 16px;
+	padding: 5px 13px;
+	width: 90%;
+	margin-bottom: 16px;
+}
+.form-check input{
+	background-color: #e4e2e2;
+	border: none;
+}
+.bietobjekt-btn{
+	width: 80%;
+	border: 3px solid #152461;
+	color: #152461;
+	border-radius: 20px;
+	font-weight: 430;
+}
+.bietobjekt-btn:hover{
+	background-color: #152461;
+	color: white;
+}
+#kaufen-modal{
+	border-radius: 15px;
+}
+
+/*Angebot Page*/
+.verkaufobjekt-info-container{
+	border-radius: 15px;
+	padding: 0px 15px 10px 15px;
+	background-color: white;
+}
+.angebot-verkauf-liste{
+	list-style: none;
+	padding: 0px;
+}
+
+
+
+.biete-page-1{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
